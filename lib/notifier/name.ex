@@ -1,5 +1,6 @@
 defmodule Notifier.Name do
   use Ecto.Schema
+  import Ecto.Changeset
 
   schema "name" do
     field :first_name, :string
@@ -11,7 +12,7 @@ defmodule Notifier.Name do
 
   @fields ~w(first_name, last_name, dob)
 
-  def changeset(struct, params // %{}) do
+  def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, @fields)
   end

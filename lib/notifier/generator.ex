@@ -18,7 +18,14 @@ defmodule Notifier.Generator do
     %{"first_name" => first_name, "last_name" => last_name, "dob" => dob}
   end
 
-  def save_to_db(%{"first_name" => first_name, "last_name" => last_name, "dob" => dob}) do
+  def save_to_db(params) do
+    changeset = Notifier.Name.changeset(%{Notifier.Name{}, params})
 
+    case Notifier.Repo.insert(changeset) do
+      {:ok, _struct} ->
+        :ok
+      {:error, changeset} ->
+        IO.inspect "An error occurred"
+    end
   end
 end

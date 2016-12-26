@@ -11,7 +11,6 @@ defmodule Notifier.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Starts a worker by calling: Notifier.Worker.start_link(arg1, arg2, arg3)
-      # worker(Notifier.Worker, [arg1, arg2, arg3]),
       supervisor(Notifier.Repo, [])
     ]
 

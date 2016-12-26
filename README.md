@@ -1,8 +1,8 @@
 # Notifier
 
 ## TODO
-- [ ] Create Schema
-- [ ] Generate migration
+- [X] Create Schema
+- [X] Generate migration
 - [ ] Seed Fake Data
 - [ ] Automatically delete all content in table and seed agian
 - [ ] Use the Postgres Notify/Listen repo track changes
