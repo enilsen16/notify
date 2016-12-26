@@ -31,6 +31,7 @@ defmodule Notifier.Mixfile do
   defp deps do
     [
       {:ecto, "~> 2.0"},
+      {:faker, "~> 0.7"},
       {:postgrex, github: "elixir-ecto/postgrex", override: true}
     ]
   end
