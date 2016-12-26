@@ -8,4 +8,11 @@ defmodule Notifier.Name do
 
     timestamps()
   end
+
+  @fields ~w(first_name, last_name, dob)
+
+  def changeset(struct, params // %{}) do
+    struct
+    |> cast(params, @fields)
+  end
 end
