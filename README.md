@@ -1,6 +1,12 @@
 # Notifier
 
-**TODO: Add description**
+## TODO
+- [ ] Create Schema
+- [ ] Generate migration
+- [ ] Seed Fake Data
+- [ ] Automatically delete all content in table and seed agian
+- [ ] Use the Postgres Notify/Listen repo track changes
+- [ ] When data is saved print to console
 
 ## Installation
 
@@ -16,4 +22,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/notifier](https://hexdocs.pm/notifier).
-
