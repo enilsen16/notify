@@ -3,8 +3,9 @@
 ## TODO
 - [X] Create Schema
 - [X] Generate migration
-- [ ] Seed Fake Data
-- [ ] Automatically delete all content in table and seed agian
+- [X] Seed Fake Data
+- [X] Automatically delete all content in table and seed agian
+- [ ] Set up Genserver for randomly seeding data
 - [ ] Use the Postgres Notify/Listen repo track changes
 - [ ] When data is saved print to console
 
