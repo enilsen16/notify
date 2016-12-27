@@ -5,7 +5,7 @@ defmodule Notifier.Repo.Migrations.AddNameTable do
     create table(:name) do
       add :first_name, :string
       add :last_name, :string
-      add :dob, :naive_datetime
+      add :dob, :date
 
       timestamps()
     end

@@ -1,4 +1,5 @@
 defmodule Notifier.Generator do
+
   @moduledoc """
     Generates fake data from faker and then saves to the db in a continous stream.
   """
@@ -7,7 +8,7 @@ defmodule Notifier.Generator do
     Clears a given table
   """
   def clear_table(table_name) do
-    Name.Repo.delete(table_name)
+    Notifier.Repo.delete_all(table_name)
   end
 
   def new_name() do
@@ -19,7 +20,7 @@ defmodule Notifier.Generator do
   end
 
   def save_to_db(params) do
-    changeset = Notifier.Name.changeset(%{Notifier.Name{}, params})
+    changeset = Notifier.Name.changeset(%Notifier.Name{}, params)
 
     case Notifier.Repo.insert(changeset) do
       {:ok, _struct} ->

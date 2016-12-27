@@ -5,12 +5,12 @@ defmodule Notifier.Name do
   schema "name" do
     field :first_name, :string
     field :last_name, :string
-    field :dob, :naive_datetime
+    field :dob, :date
 
     timestamps()
   end
 
-  @fields ~w(first_name, last_name, dob)
+  @fields [:first_name, :last_name, :dob]
 
   def changeset(struct, params \\ %{}) do
     struct

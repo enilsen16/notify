@@ -1,18 +1,6 @@
 defmodule Notifier do
+  import Notifier.Generator
   @moduledoc """
   Documentation for Notifier.
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Notifier.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
