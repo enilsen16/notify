@@ -9,14 +9,18 @@ defmodule Notifier.Randomizer do
   end
 
   def init(state) do
-    Process.send_after(self(), :work, 1000)
+    Notifier.Generator.clear_table(Notifier.Name)
+    Process.send_after(self(), :work, generate_number())
     {:ok, state}
   end
 
   def handle_info(:work, state) do
-    Process.send_after(self(), :work, 1000)
+    Notifier.seed_db()
+    Process.send_after(self(), :work, generate_number())
     {:noreply, state}
   end
 
-  #TODO: Add function to randomly timeout :)
+  defp generate_number() do
+    :rand.uniform() * 1000 |> trunc()
+  end
 end

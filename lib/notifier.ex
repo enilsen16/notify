@@ -3,4 +3,9 @@ defmodule Notifier do
   @moduledoc """
   Documentation for Notifier.
   """
+
+  def seed_db() do
+    new_name()
+    |> save_to_db
+  end
 end
