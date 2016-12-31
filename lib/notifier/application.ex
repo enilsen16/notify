@@ -11,7 +11,8 @@ defmodule Notifier.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Starts a worker by calling: Notifier.Worker.start_link(arg1, arg2, arg3)
-      supervisor(Notifier.Repo, [])
+      supervisor(Notifier.Repo, []),
+      worker(Notifier.Randomizer, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
