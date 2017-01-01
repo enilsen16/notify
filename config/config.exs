@@ -21,7 +21,6 @@ use Mix.Config
 #     config :logger, level: :info
 #
 config :notifier, ecto_repos: [Notifier.Repo]
-
 if Mix.env == :test do
   config :notifier, Notifier.Repo,
   adapter: Ecto.Adapters.Postgres,

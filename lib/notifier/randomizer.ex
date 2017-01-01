@@ -9,7 +9,7 @@ defmodule Notifier.Randomizer do
   end
 
   def init(state) do
-    Notifier.Generator.clear_table(Notifier.Name)
+    # Notifier.Generator.clear_table(Notifier.Name)
     Process.send_after(self(), :work, generate_number())
     {:ok, state}
   end

@@ -6,7 +6,8 @@
 - [X] Seed Fake Data
 - [X] Automatically delete all content in table and seed agian
 - [X] Set up Genserver for randomly seeding data
-- [ ] Use the Postgres Notify/Listen repo track changes
+- [ ] Add Notify Query to table
+- [ ] Use the Postgres Listen repo to track changes
 - [ ] When data is saved print to console
 
 ## Installation
