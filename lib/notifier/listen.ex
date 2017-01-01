@@ -16,7 +16,6 @@ defmodule Notifier.Listen do
 
   def init(state) do
     {:ok, pid} = Postgrex.Notifications.start_link(@pg_conf ++ [name: :notifications])
-    IO.inspect pid
     {:ok, ref} = Postgrex.Notifications.listen(pid, "virtual")
     {:ok, {pid, "notifier", ref}}
   end
@@ -31,3 +30,4 @@ defmodule Notifier.Listen do
     {:noreply, state}
   end
 end
+# TODO: Connect to postgrex through channel
